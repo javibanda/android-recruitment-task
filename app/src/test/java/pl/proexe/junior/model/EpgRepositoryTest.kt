@@ -7,9 +7,4 @@ import pl.proexe.junior.model.repository.epg.EpgRepository
 class EpgRepositoryTest {
 
     lateinit var repository: EpgRepository
-
-    @Test
-    fun `repository should exist`() {
-        Assertions.assertTrue(::repository.isInitialized)
-    }
 }
