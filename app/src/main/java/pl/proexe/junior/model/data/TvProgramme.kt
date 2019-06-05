@@ -9,5 +9,6 @@ data class TvProgramme(
         val category: TvProgrammeCategory,
         val isFavourite: Boolean,
         val startTime: Date,
-        val endTime: Date
+        val endTime: Date,
+        val progressPercent: Int
 )
