@@ -2,21 +2,12 @@ package pl.proexe.junior.model
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import pl.proexe.junior.model.data.TvProgrammeCategory
-import pl.proexe.junior.model.repository.LocalEpgRepository
 import java.util.*
 
 class EpgRepositoryTest {
 
     lateinit var repository: LocalEpgRepository
-
-    @BeforeEach
-    fun setup() {
-        repository = LocalEpgRepository()
-    }
 
     @Test
     fun `repository should exist`() {
