@@ -9,7 +9,6 @@ import pl.proexe.junior.model.data.TvProgramme
 import pl.proexe.junior.model.data.TvProgrammeCategory
 import pl.proexe.junior.presenter.epg.EpgPresenter
 import pl.proexe.junior.presenter.epg.LocalEpgPresenter
-import java.util.*
 
 class EpgActivity : AppCompatActivity(), EpgView {
 
@@ -39,10 +38,6 @@ class EpgActivity : AppCompatActivity(), EpgView {
     }
 
     override fun selectDayTile(dayTile: DayTile) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun getCurrentlySelectedDateTime(): Date {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

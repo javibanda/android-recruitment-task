@@ -1,7 +1,9 @@
 package pl.proexe.junior.view.epg
 
-import pl.proexe.junior.model.data.*
-import java.util.*
+import pl.proexe.junior.model.data.DayTile
+import pl.proexe.junior.model.data.NavigationDrawerModel
+import pl.proexe.junior.model.data.TvProgramme
+import pl.proexe.junior.model.data.TvProgrammeCategory
 
 interface EpgView {
 
@@ -14,6 +16,4 @@ interface EpgView {
     fun showNavigationDrawer(drawerModel: NavigationDrawerModel)
 
     fun selectDayTile(dayTile: DayTile)
-
-    fun getCurrentlySelectedDateTime(): Date
 }

@@ -20,24 +20,28 @@ class LocalEpgPresenter : EpgPresenter {
     }
 
     private fun refreshDays() =
-        view.showDaysList(timeRepository.getDayTiles())
+        view.showDaysList(
+            timeRepository.getDayTiles()
+        )
 
     private fun refreshProgrammes() =
-        view.showEpgList(getProgrammes())
+        view.showEpgList(
+            getProgrammes()
+        )
 
     override fun onEpgProgrammeClick(programme: TvProgramme) {
         //No-op
     }
 
-    override fun onDayTileClick(dayTile: DayTile) {
+    override fun onDayTileClick(dayTile: DayTile) =
         view.selectDayTile(dayTile)
-    }
 
-    override fun onCategoryClick(category: TvProgrammeCategory) {
+    override fun onCategoryClick(category: TvProgrammeCategory) =
         view.showEpgList(
-            getProgrammes().filter { category == TvProgrammeCategory.ALL || category == it.category }
+            getProgrammes().filter {
+                category == TvProgrammeCategory.ALL || category == it.category
+            }
         )
-    }
 
     private fun getProgrammes() =
         epgRepository.getProgrammesForDateTime(timeRepository.getCurrentTime())
