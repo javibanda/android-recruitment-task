@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">android-junior</string>
+    <string name="nav_drawer_main_screen">Strong główna</string>
+    <string name="day_before_yesterday">Przedwczoraj</string>
+    <string name="yesterday">Wczoraj</string>
+    <string name="today">Dzisiaj</string>
+    <string name="tomorrow">Jutro</string>
+    <string name="day_after_tomorrow">Pojutrze</string>
 </resources>
