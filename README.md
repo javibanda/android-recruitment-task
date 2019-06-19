@@ -11,7 +11,7 @@ Colors and icons are included in the Android Studio project. If something is mis
 
 ## Task
 
-There are 4 part of this task, try to do as much as you can,
+There are 4 parts of this task, try to do as much as you can,
 
 ### 1. List of programs
 https://projects.invisionapp.com/share/TCSHR6FWZMV#/screens/368569053
@@ -27,7 +27,7 @@ Try to make drawer as presented above.
 Create a dropdown menu with a list of categories. Note: there is no provider to the list of categories, add it in a place where it should be!
 
 ###4. Polishing
-Try to polish the whole thing. Note the are few gradients on the design. Try to copy them into your project.
+Try to polish the whole thing. Note, there are a few gradients on the design. Try to copy them into your project.
 
 ## Time
 
