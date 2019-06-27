@@ -33,5 +33,9 @@ Try to polish the whole thing. Note, there are a few gradients on the design. Tr
 
 You have 4 hours to complete the task. It's possible that you will not finish everything - try to do as much as you can.
 
+## Git
+
+It is allowed for you to create additional git branches and commits as needed. 
+
 ## Sending your solution
 Please send your solution as a .zip file with the git inside as attachment with the thread we started sending a task in the first place.
