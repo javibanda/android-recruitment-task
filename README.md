@@ -35,7 +35,7 @@ You have 4 hours to complete the task. It's possible that you will not finish ev
 
 ## Git
 
-It is allowed for you to create additional git branches and commits as needed. 
+You should create additional git branches and commits as needed.
 
 ## Sending your solution
 Please send your solution as a .zip file with the git inside as attachment with the thread we started sending a task in the first place.
