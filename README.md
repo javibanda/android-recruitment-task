@@ -22,11 +22,11 @@ You can omit to make gradients for now.
 [https://projects.invisionapp.com/share/TCSHR6FWZMV#/screens/368569054](https://projects.invisionapp.com/share/TCSHR6FWZMV#/screens/368569054)
 Try to make drawer as presented above. 
 
-###3. Dropdown menu
+### 3. Dropdown menu
 [https://projects.invisionapp.com/share/TCSHR6FWZMV#/screens/368569052](https://projects.invisionapp.com/share/TCSHR6FWZMV#/screens/368569052)
 Create a dropdown menu with a list of categories. Note: there is no provider to the list of categories, add it in a place where it should be!
 
-###4. Polishing
+### 4. Polishing
 Try to polish the whole thing. Note, there are a few gradients on the design. Try to copy them into your project.
 
 ## Time
