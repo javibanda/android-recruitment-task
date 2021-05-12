@@ -10,20 +10,20 @@ import pl.proexe.junior.model.data.TvProgramme
 import pl.proexe.junior.model.extensions.loadUrl
 import java.text.SimpleDateFormat
 
-class ListTvProgramViewHolder (itemView: View): BaseViewHolder(itemView){
+class ListTvProgramViewHolder(itemView: View) : BaseViewHolder(itemView) {
+
     private val image = itemView.findViewById<ImageView>(R.id.image)
     private val txtTittle = itemView.findViewById<TextView>(R.id.txtTittle)
-    private val txtTime =  itemView.findViewById<TextView>(R.id.txtTime)
+    private val txtTime = itemView.findViewById<TextView>(R.id.txtTime)
     private val txtType = itemView.findViewById<TextView>(R.id.txtType)
     private val progressBar = itemView.findViewById<ProgressBar>(R.id.progressBar)
-    fun bindListTvProgram(programmes: TvProgramme){
-        setTexts(programmes)
+
+    fun bindListTvProgram(programmes: TvProgramme) {
+        setEditTexts(programmes)
         setProgressBar(programmes)
-
-
     }
 
-    private fun setTexts(programmes: TvProgramme){
+    private fun setEditTexts(programmes: TvProgramme) {
         txtTittle.text = programmes.title
         txtTime.text = setTime(programmes)
         txtType.text = programmes.type
@@ -31,16 +31,15 @@ class ListTvProgramViewHolder (itemView: View): BaseViewHolder(itemView){
     }
 
 
-    private fun setTime(programmes: TvProgramme): String{
+    private fun setTime(programmes: TvProgramme): String {
+
         val pattern = SimpleDateFormat("HH:mm")
         val starTime = pattern.format(programmes.startTime)
         val endTime = pattern.format(programmes.endTime)
-
         return "$starTime - $endTime"
     }
 
-    private fun setProgressBar(programmes: TvProgramme){
+    private fun setProgressBar(programmes: TvProgramme) {
         progressBar.progress = programmes.progressPercent
-
     }
 }

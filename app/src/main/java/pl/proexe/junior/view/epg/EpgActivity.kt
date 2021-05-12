@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,14 +26,14 @@ import pl.proexe.junior.presenter.epg.LocalEpgPresenter
 class EpgActivity : AppCompatActivity(), EpgView {
 
     private val presenter: EpgPresenter = LocalEpgPresenter()
-
+    private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var recView: RecyclerView
     private lateinit var navView: NavigationView
     private lateinit var recView2: RecyclerView
 
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.navigation_drawer, menu)
+
         return true
     }
 
@@ -42,14 +43,9 @@ class EpgActivity : AppCompatActivity(), EpgView {
         recView = findViewById(R.id.myRecycler)
         navView = findViewById(R.id.navView)
         recView2 = findViewById(R.id.recyclerView)
-
-        navView.visibility = View.INVISIBLE
-
-
         presenter.onViewCreated(this)
 
     }
-
 
     override fun showEpgList(programmes: List<TvProgramme>) {
         val programmesAdapter = ListTvProgramRecyclerAdapter(programmes)
@@ -57,27 +53,34 @@ class EpgActivity : AppCompatActivity(), EpgView {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
             adapter = programmesAdapter
-
         }
     }
 
     override fun showDaysList(days: List<DayTile>) {
-        for (i in days) {
-            Log.d(":::days", i.toString())
+        val daysAdapter = ListDayTilesRecyclerAdapter(days)
+        recView2.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            smoothScrollToPosition(4)
+            setHasFixedSize(true)
+            adapter = daysAdapter
         }
     }
 
     override fun showCategories(categories: List<TvProgrammeCategory>) {
-
+        for (i in categories){
+            Log.d(":::Categories", i.toString())
+        }
     }
 
     override fun showNavigationDrawer(drawerModel: NavigationDrawerModel) {
 
-        Log.d(":::drawerModel", drawerModel.toString())
     }
 
     override fun selectDayTile(dayTile: DayTile) {
 
 
     }
+
+
+
 }

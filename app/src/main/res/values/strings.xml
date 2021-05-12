@@ -6,4 +6,6 @@
     <string name="today">Dzisiaj</string>
     <string name="tomorrow">Jutro</string>
     <string name="day_after_tomorrow">Pojutrze</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>

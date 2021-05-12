@@ -7,15 +7,13 @@ import pl.proexe.junior.model.data.TvProgramme
 
 class ListTvProgramRecyclerAdapter(
     private val itemsList: List<TvProgramme>
-): BaseRecyclerAdapter<TvProgramme, ListTvProgramViewHolder>(itemsList){
+) : BaseRecyclerAdapter<TvProgramme, ListTvProgramViewHolder>(itemsList) {
 
     override fun createViewHolder(view: View, viewType: Int) = ListTvProgramViewHolder(view)
 
     override fun getViewHolderLayoutId(viewType: Int) = R.layout.item_tv_program
 
     override fun onBindViewHolder(holder: ListTvProgramViewHolder, position: Int) {
-       holder.bindListTvProgram(itemsList[position])
+        holder.bindListTvProgram(itemsList[position])
     }
-
-
 }
